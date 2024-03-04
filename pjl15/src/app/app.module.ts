@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { FormsModule } from '@angular/forms';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -16,11 +18,13 @@ import { VarComponent } from './var/var.component';
     AppComponent,
     HomeComponent,
     IntroComponent,
-    VarComponent
+    VarComponent,
+    DirectivesComponent
   ],
   imports: [ // module
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [], // service
   bootstrap: [AppComponent]
