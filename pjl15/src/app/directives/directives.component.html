@@ -1,0 +1,100 @@
+<p>directives works!</p>
+<!-- 
+    *ngIf -- if condition doesnt satisify it  will not show the element in DOM
+    [hidden]  -- it will add hidden class/attribute to the element
+    
+    *ngFor -- it will create the html element(s) as the number of times the loop run
+    [(ngModel)]
+    [ngSwitch]
+    *ngSwitchCase
+    *ngSwitchDefault
+    [ngClass]
+    [ngStyle]
+    (click)
+    (mouseover)
+
+
+
+    *    -- conditions & loops
+    []   -- attributes4
+    ()   -- events 
+    [()] -- two way data binding
+    #    -- local variables
+ -->
+
+ {{fname}} **
+ {{fruits}}
+<br>
+ <input type="text" placeholder="tye anthing" [(ngModel)]="fname">
+ <br><br>
+ <p *ngIf="fname=='angular'">this is If</p>
+ <p [hidden]="fname=='angular'">this is hidden</p>
+
+ <div [ngSwitch]="fname">
+    <p *ngSwitchCase="'angular'"> this is angular</p>
+    <p *ngSwitchCase="'lokesh'"> this is lokesh</p>
+    <p *ngSwitchCase="'jawahar'"> this is jawahar</p>
+    <p *ngSwitchCase="'pranathi'"> this is pranathi</p>
+    <p *ngSwitchDefault> this is default</p>
+ </div>
+
+ <h1 *ngFor="let fruit of fruits">{{fruit}}</h1>
+ <ol>
+    <li  *ngFor="let fruit of fruits">{{fruit}}</li>
+ </ol>
+
+ <select >
+    <option  *ngFor="let fruit of fruits" >{{fruit}}</option>
+ </select>
+
+ <table border="1" >
+    <tr *ngFor="let fruit of fruits">
+        <td >{{fruit}}</td>
+    </tr>
+ </table>
+
+ <p [ngClass]="{'error': (fname === 'angular'), 'success': (fname !== 'angular')}"> this is ng class</p>
+ <p [ngStyle]="{'color': (fname == 'angular') ?'red' : 'green'}"> this is ng style</p>
+
+<div class="events">
+
+ <p (click)="callMe()"> this is click </p>
+ <p (dblclick)="callMe()"> this is dblclick </p>
+ <p (contextmenu)="callMe()"> this is contextmenu </p>
+ <p (mouseover)="callMe()"> this is mouseover </p>
+ <p (mouseout)="callMe()"> this is mouseout </p>
+ <p (mouseenter)="callMe()"> this is mouseenter </p>
+ <p (mouseleave)="callMe()"> this is mouseleave </p>
+ <p (mousemove)="callMe()"> this is mousemove </p>
+ <p (mouseup)="callMe()"> this is mouseup </p>
+ <p (mousedown)="callMe()"> this is mousedown </p>
+</div>
+ <pre>
+   <form (submit)="callMe()">
+      <input type="text" (click)="callMe()" placeholder="click"/>
+      
+      <input type="text" (focus)="callMe()" placeholder="focus"/>
+      
+      <input type="text" (blur)="callMe()" placeholder="blur"/>
+      
+      <input type="text" (keyup)="callMe()" placeholder="keyup"/>
+      
+      <input type="text" (keydown)="callMe()" placeholder="keydown"/>
+      
+      <input type="text" (keypress)="callMe()" placeholder="keypress"/>
+      
+      <input type="text" (change)="callMe()" placeholder="change"/>
+      
+      <input type="text" (input)="callMe()" placeholder="input"/>
+      
+      <input type="text" (copy)="callMe()" placeholder="copy"/>
+      
+      <input type="text" (paste)="callMe()" placeholder="paste"/>
+      
+      <input type="text" (cut)="callMe()" placeholder="cut"/>
+      
+      <input type="text" (select)="callMe()" placeholder="select"/>
+
+      <button > sumbit</button>
+   </form>
+ </pre>
