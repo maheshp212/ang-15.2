@@ -1,5 +1,5 @@
 <p>forms works!</p>
-* are mandatory
+<!-- * are mandatory
 
 email
 password
@@ -38,4 +38,64 @@ field states
     hasError('maxlength')
     hasError('min')
     hasError('max')
-    hasError('pattern')
+    hasError('pattern') -->
+
+
+    <pre>
+        <form name="form" #f="ngForm" (submit)="f.valid && reg()">
+
+            <input type="text" [(ngModel)]="fname" #firstName="ngModel" name="fname" placeholder="firt name" required minlength="5" maxlength="10"/> {{fname}}  {{firstName.valid}}
+
+
+            <!-- <div class="error" *ngIf="firstName.invalid"> please enter a valid value </div> -->
+            <!-- <div class="error" *ngIf="f.submitted && firstName.invalid"> please enter a valid value </div> -->
+            <!-- <div class="error" *ngIf="f.submitted && firstName.hasError('required')"> This is a mandatory field </div>
+            <div class="error" *ngIf="f.submitted && firstName.hasError('minlength')"> Please enter min 5 characters </div>
+             -->
+            <!-- <div class="error" *ngIf="firstName.dirty && firstName.hasError('required')"> This is a mandatory field </div>
+            <div class="error" *ngIf="firstName.dirty && firstName.hasError('minlength')"> Please enter min 5 characters </div> -->
+            
+            <!-- <div class="error" *ngIf="firstName.touched && firstName.hasError('required')"> This is a mandatory field </div>
+            <div class="error" *ngIf="firstName.touched && firstName.hasError('minlength')"> Please enter min 5 characters </div> -->
+            
+            
+            <div class="error" *ngIf="(firstName.dirty || f.submitted) && firstName.hasError('required')"> This is a mandatory field </div>
+            <div class="error" *ngIf="(firstName.dirty || f.submitted) && firstName.hasError('minlength')"> Please enter min 5 characters </div>
+            
+            
+            <input type="email" [(ngModel)]="email" #emailId="ngModel" name="email" placeholder="email"/> {{emailId.valid}}
+            
+            <input type="number" [(ngModel)]="age" #ageNo="ngModel" name="age222" placeholder="age" min="18" max="40"/> {{ageNo.valid}}
+            <!-- <div class="error" *ngIf="ageNo.invalid"> please enter a valid age </div> -->
+            <div class="error" *ngIf="f.submitted && ageNo.invalid"> please enter a valid age </div>
+            
+            <input type="tel" [(ngModel)]="phone" #phoneNo="ngModel" name="phone" placeholder="phone number" pattern="[6789][0-9]{9}"/> {{phoneNo.valid}}
+            
+            <input type="date" [(ngModel)]="today" #date="ngModel" name="today" min="2023-10-11" max="2024-05-23"/> {{date.valid}}
+
+            <button>Im submit Button</button>
+        </form>
+
+        ***Form states
+
+        valid :: {{f.valid}}
+        invalid :: {{f.invalid}}
+        dirty :: {{f.dirty}}
+        pristine :: {{f.pristine}}
+        touched :: {{f.touched}}
+        untouched :: {{f.untouched}}
+        submitted :: {{f.submitted}}
+        
+
+        ***Field states 
+
+        valid :: {{firstName.valid}}
+        invalid :: {{firstName.invalid}}
+        dirty :: {{firstName.dirty}}
+        pristine :: {{firstName.pristine}}
+        touched :: {{firstName.touched}}
+        untouched :: {{firstName.untouched}}
+        hasError('required') :: {{firstName.hasError('required')}}
+        hasError('minlength') :: {{firstName.hasError('minlength')}}
+        hasError('maxlength') :: {{firstName.hasError('maxlength')}}
+    </pre>

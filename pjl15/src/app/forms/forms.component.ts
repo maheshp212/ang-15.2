@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class FormsComponent {
 
+  fname:string = '';
+  email:string = '';
+  age:number = 0;
+  phone:string = '';
+  today:string = '';
+  reg(){
+    alert('I got details');
+  }
 }

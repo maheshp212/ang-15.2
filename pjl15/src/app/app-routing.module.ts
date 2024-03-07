@@ -5,6 +5,7 @@ import { VarComponent } from './var/var.component';
 import { IntroComponent } from './intro/intro.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 
 const routes: Routes = [
   {path:"home", component: HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:"intro", component: IntroComponent},
   {path:"dir", component: DirectivesComponent},
   {path:"forms", component: FormsComponent},
+  {path:"obj-forms", component: ObjFormsComponent},
 ];
 
 @NgModule({

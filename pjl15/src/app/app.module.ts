@@ -9,6 +9,7 @@ import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -21,7 +22,8 @@ import { FormsComponent } from './forms/forms.component';
     IntroComponent,
     VarComponent,
     DirectivesComponent,
-    FormsComponent
+    FormsComponent,
+    ObjFormsComponent
   ],
   imports: [ // module
     BrowserModule,
