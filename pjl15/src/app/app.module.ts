@@ -7,9 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirectivesComponent } from './directives/directives.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -23,12 +27,17 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
     VarComponent,
     DirectivesComponent,
     FormsComponent,
-    ObjFormsComponent
+    ObjFormsComponent,
+    ReactiveFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe
   ],
   imports: [ // module
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [], // service
   bootstrap: [AppComponent]
