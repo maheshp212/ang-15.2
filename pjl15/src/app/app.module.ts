@@ -14,6 +14,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -31,7 +32,8 @@ import { ParamsPipe } from './params.pipe';
     ReactiveFormsComponent,
     PipesComponent,
     HexaPipe,
-    ParamsPipe
+    ParamsPipe,
+    LifeCycleComponent
   ],
   imports: [ // module
     BrowserModule,
