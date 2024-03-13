@@ -15,6 +15,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ApisComponent } from './apis/apis.component';
+import {HttpClientModule} from '@angular/common/http';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -33,13 +35,15 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    LifeCycleComponent
+    LifeCycleComponent,
+    ApisComponent
   ],
   imports: [ // module
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [], // service
   bootstrap: [AppComponent]
