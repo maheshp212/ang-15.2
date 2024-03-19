@@ -1,0 +1,57 @@
+<p>reactive-forms works!</p>
+
+<pre>
+    <form name="form" [formGroup]="regFormGroup"  (submit)="reg()">
+
+        <input type="text" name="fname" formControlName="fname" placeholder="fname"/>
+
+
+        <div class="error" *ngIf="regFormGroup.controls['fname'].invalid"> please enter a valid value </div>
+        <!-- <div class="error" *ngIf="regFormGroup.submitted && regFormGroup.controls['fname'].invalid"> please enter a valid value </div> -->
+        <!-- <div class="error" *ngIf="regFormGroup.submitted && regFormGroup.controls['fname'].hasError('required')"> This is a mandatory field </div>
+        <div class="error" *ngIf="regFormGroup.submitted && regFormGroup.controls['fname'].hasError('minlength')"> Please enter min 5 characters </div>
+         -->
+        <!-- <div class="error" *ngIf="regFormGroup.controls['fname'].dirty && regFormGroup.controls['fname'].hasError('required')"> This is a mandatory field </div>
+        <div class="error" *ngIf="regFormGroup.controls['fname'].dirty && regFormGroup.controls['fname'].hasError('minlength')"> Please enter min 5 characters </div> -->
+        
+        <!-- <div class="error" *ngIf="regFormGroup.controls['fname'].touched && regFormGroup.controls['fname'].hasError('required')"> This is a mandatory field </div>
+        <div class="error" *ngIf="regFormGroup.controls['fname'].touched && regFormGroup.controls['fname'].hasError('minlength')"> Please enter min 5 characters </div> -->
+        
+        
+        <!-- <div class="error" *ngIf="(regFormGroup.controls['fname'].dirty || regFormGroup.submitted) && regFormGroup.controls['fname'].hasError('required')"> This is a mandatory field </div>
+        <div class="error" *ngIf="(regFormGroup.controls['fname'].dirty || regFormGroup.submitted) && regFormGroup.controls['fname'].hasError('minlength')"> Please enter min 5 characters </div>
+         -->
+
+         <input type="text" name="lanme" formControlName="lname" placeholder="lname" />
+         
+         <input type="text" name="age" formControlName="age" placeholder="age" />
+         
+         <input type="text" name="phone" formControlName="phone" placeholder="phone" />
+ 
+        
+        <button>Im submit Button</button>
+    </form>
+
+    ***Form states
+
+    valid :: {{regFormGroup.valid}}
+    invalid :: {{regFormGroup.invalid}}
+    dirty :: {{regFormGroup.dirty}}
+    pristine :: {{regFormGroup.pristine}}
+    touched :: {{regFormGroup.touched}}
+    untouched :: {{regFormGroup.untouched}}
+    submitted :: {{submitted}}
+    
+
+    ***Field states 
+
+    valid :: {{regFormGroup.controls['fname'].valid}}
+    invalid :: {{regFormGroup.controls['fname'].invalid}}
+    dirty :: {{regFormGroup.controls['fname'].dirty}}
+    pristine :: {{regFormGroup.controls['fname'].pristine}}
+    touched :: {{regFormGroup.controls['fname'].touched}}
+    untouched :: {{regFormGroup.controls['fname'].untouched}}
+    hasError('required') :: {{regFormGroup.controls['fname'].hasError('required')}}
+    hasError('minlength') :: {{regFormGroup.controls['fname'].hasError('minlength')}}
+    hasError('maxlength') :: {{regFormGroup.controls['fname'].hasError('maxlength')}}
+</pre>

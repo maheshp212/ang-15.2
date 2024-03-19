@@ -1,0 +1,28 @@
+<p>apis works!</p>
+
+<div class="user-item header">
+    <div class="user-img">Image</div>
+    <div class="user-id">ID</div>
+    <div class="user-name">Name</div>
+    <div class="user-email">Email</div>
+    <div class="user-gender">Gender</div>
+    <div class="user-status">Status</div>
+    <div class="user-action">Action</div>
+</div>
+<div class="user-item" *ngFor="let user of usersList">
+    <div class="user-img"><img src="assets/user.jpg"></div>
+    <div class="user-id">{{user.id}}</div>
+    <div class="user-name">{{user.name}}</div>
+    <div class="user-email">{{user.email}}</div>
+    <div class="user-gender">{{user.gender}}</div>
+    <div class="user-status">{{user.status}}</div>
+    <div class="user-status">
+        <div (click)="updateUser(user.id)">Edit</div>
+        <p (click)="viewUser(user.id)">View</p>
+        <button (click)="deleteUser(user.id)">Delete</button>
+    </div>
+</div>
+<pre>
+    <button (click)="creatUser()">Create </button>
+{{userInfo | json}}
+</pre>

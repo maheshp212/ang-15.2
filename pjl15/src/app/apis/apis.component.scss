@@ -1,0 +1,33 @@
+.user-item{
+    display: flex;
+    padding: 5px;
+    border-width: 1px;
+    border-color: grey;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+.header{
+    font-weight: bold;
+}
+.user-img{
+    width: 10%;
+    img{
+        width: 80%;;
+        border-radius: 50%;
+    }
+}
+.user-id{
+     width: 10%;
+    }
+.user-name{
+    width: 35%;
+}
+.user-email{
+    width: 35%;
+}
+.user-gender{
+    width: 10%;
+}
+.user-status{
+    width: 10%;
+}

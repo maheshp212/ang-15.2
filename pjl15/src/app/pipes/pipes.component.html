@@ -1,0 +1,48 @@
+<p>pipes works!</p>
+
+
+<pre>
+
+    {{fname}}
+    {{fname | uppercase}}
+    {{fname | lowercase}}
+    {{fname | slice:2:5}}
+    {{fname | number}}**
+    {{fname | titlecase}}
+
+    {{"QuillBot's AI-powered paraphrasing tool will enhance your writing. Your words matter, and our paraphrasing tool is designed to ensure you use the right ones" | titlecase}}
+    {{"QuillBot's AI-powered paraphrasing tool will enhance your writing. Your words matter, and our paraphrasing tool is designed to ensure you use the right ones" | lowercase}}
+
+
+
+    {{age}}
+    {{age | number}}
+    {{age | number:'5.5'}}
+    {{age | number:'3.1-3'}}
+
+
+
+    {{age | currency}}
+    {{age | currency:'INR'}}
+    {{age | currency:'EUR'}}
+    {{age | currency:'INR '}}
+    {{age | currency:'Rs. '}}
+    {{age | currency:'&#8377; '}}
+    {{age | currency:'&copy; '}}
+
+
+    {{age | hexa}}
+    {{15 | hexa}}
+    {{255 | hexa}}
+    {{123 | hexa}}
+
+    {{5 | params:2:3:5}}
+
+    {{today}}
+    {{today |date}}
+    {{today | date:'dd-MM-YYYY HH:mm:ss'}}
+
+    {{user}}
+    {{user.name}}
+    {{user | json}}
+</pre>

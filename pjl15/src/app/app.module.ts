@@ -17,6 +17,7 @@ import { ParamsPipe } from './params.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
 import {HttpClientModule} from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -36,7 +37,8 @@ import {HttpClientModule} from '@angular/common/http';
     HexaPipe,
     ParamsPipe,
     LifeCycleComponent,
-    ApisComponent
+    ApisComponent,
+    NotFoundComponent
   ],
   imports: [ // module
     BrowserModule,
