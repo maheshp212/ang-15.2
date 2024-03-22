@@ -11,6 +11,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { MaterialComponent } from './material/material.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path:"life/:id/:name", component: LifeCycleComponent},
   {path:":name/p/:id", component: LifeCycleComponent},
   {path:"apis", component: ApisComponent},
+  {path:"bootstrap", component: BootstrapComponent},
+  {path:"material", component: MaterialComponent},
   {path:"**", component: NotFoundComponent},
 ];
 

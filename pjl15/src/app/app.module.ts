@@ -18,6 +18,15 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CustomComponent } from './custom/custom.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DialogOverviewExampleDialog, MaterialComponent } from './material/material.component';
+import { BootstrapComponent } from './bootstrap/bootstrap.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from './material.module';
+import { MatNativeDateModule } from '@angular/material/core';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -38,14 +47,24 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ParamsPipe,
     LifeCycleComponent,
     ApisComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CustomComponent,
+    UsersListComponent,
+    UserInfoComponent,
+    MaterialComponent,
+    BootstrapComponent,
+    DialogOverviewExampleDialog
   ],
   imports: [ // module
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MaterialExampleModule,
+    MatNativeDateModule,
   ],
   providers: [], // service
   bootstrap: [AppComponent]

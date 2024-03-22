@@ -1,1 +1,9 @@
 <p>intro works!</p>
+
+<app-custom [name]="'ram mohan'" [age]="6" (fetchData)="getData($event)"></app-custom>
+<app-custom [name]="name2" [age]="age2" (fetchData)="getData($event)"/>
+<!-- <app-custom [name]="'jagan'" [age]="56"/>
+<app-custom [name]="'krishna'" [age]="78"/>
+<app-custom [name]="'Hare Ram'" [age]="12"/> -->
+
+<app-users-list [users]="usersList"></app-users-list>
