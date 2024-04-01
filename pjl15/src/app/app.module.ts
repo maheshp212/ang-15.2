@@ -27,6 +27,7 @@ import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ObsComponent } from './obs/obs.component';
 // components -- page / block
 // directives -- custome html attribute
 // pipes -- text transformation
@@ -53,7 +54,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     UserInfoComponent,
     MaterialComponent,
     BootstrapComponent,
-    DialogOverviewExampleDialog
+    DialogOverviewExampleDialog,
+    ObsComponent
   ],
   imports: [ // module
     BrowserModule,

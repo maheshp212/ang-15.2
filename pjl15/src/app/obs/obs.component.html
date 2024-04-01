@@ -1,0 +1,28 @@
+<p>obs works!</p>
+<pre>
+<!-- <code>    numbers = from([1, 2, 3]);
+    numbers1 = from([
+       name: 'bittu', city: 'blr' ,
+       name: 'bittu', city: 'blr' ,
+    ]);
+    numbers2 = from('hello');
+    numbers3 = from(new Promise((resolve, reject) => resolve('hello')));
+    numbers4 = from(fetch('https://jsonplaceholder.typicode.com/users/1')); -->
+    <!-- </code> -->
+
+    numbers = from([1, 2, 3, 4]);   
+
+
+    this.numbers
+        .pipe(
+          map(function (x) 
+            return x * 2;
+          ),
+          filter(function(x)
+            return x>2
+          )
+        )
+        .subscribe((data) => 
+          console.log("pipe- map, filter operators",data);
+        );
+</pre>

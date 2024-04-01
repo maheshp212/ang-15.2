@@ -13,6 +13,7 @@ import { ApisComponent } from './apis/apis.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BootstrapComponent } from './bootstrap/bootstrap.component';
 import { MaterialComponent } from './material/material.component';
+import { ObsComponent } from './obs/obs.component';
 
 const routes: Routes = [
   {path:"", component: HomeComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:"apis", component: ApisComponent},
   {path:"bootstrap", component: BootstrapComponent},
   {path:"material", component: MaterialComponent},
+  {path:"obs", component: ObsComponent},
   {path:"**", component: NotFoundComponent},
 ];
 
