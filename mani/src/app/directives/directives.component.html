@@ -1,0 +1,88 @@
+<p>directives works!</p>
+<!-- *ngIf -- if condition doesnt satisify it  will not show the element in DOM
+[hidden]  -- it will add hidden class/attribute to the element
+
+*ngFor -- it will create the html element(s) as the number of times the loop run
+[(ngModel)]
+[ngSwitch]
+*ngSwitchCase
+*ngSwitchDefault
+[ngClass]
+[ngStyle]
+(click)
+(mouseover)
+
+
+"    *    -- conditions & loops
+[]   -- attributes
+()   -- events 
+[()] -- two way data binding
+#    -- local variables" -->
+
+<input type="text" [(ngModel)]="fname" /> {{ fname }}
+
+<!-- if condition satisfy it will show the paragraph in the dom,
+  or else it will remove it from the DOM -->
+<p *ngIf="fname === 'angular'">this is if</p>
+
+<!-- if condition satisfy it will add `hidden` attribute or else not,
+  if `hidden` attribut is ther then it will hide the element -->
+<p [hidden]="fname === 'angular'">this is hidden</p>
+
+<div [ngSwitch]="fname">
+  <p *ngSwitchCase="'angular'">this is angular</p>
+  <p *ngSwitchCase="'js'">this is js</p>
+  <p *ngSwitchCase="'react'">this is react</p>
+  <p *ngSwitchCase="'mani'">this is mani</p>
+  <p *ngSwitchDefault>this is default</p>
+</div>
+
+<h1 *ngFor="let fruit of fruits"> {{fruit}}</h1>
+
+
+
+<p (click)="callMe()"> this is click</p>
+<p (dblclick)="callMe()"> this is dblclick</p>
+<p (mouseup)="callMe()"> this is mouse up</p>
+<p (mousedown)="callMe()"> this is down</p>
+<p (mouseenter)="callMe()"> this is enter</p>
+<p (mouseleave)="callMe()"> this is leave</p>
+<p (mousemove)="callMe()"> this is move</p>
+<p (mouseover)="callMe()"> this is over</p>
+<p (mouseout)="callMe()"> this is out</p>
+<a href="#" (mouseout)="callMe()"> this is link</a>
+
+
+
+<pre>
+    <form (submit)="callMe()" >
+    <input type="button" value="this is button" (click)="callMe()" placeholder="click">
+
+    <input type="text" (change)="callMe()" placeholder="change">
+    
+    <input type="text" (input)="callMe()" placeholder="input">
+    
+    <input type="text" (focus)="callMe()" placeholder="focus">
+    
+    <input type="text" (blur)="callMe()" placeholder="blur">
+    
+    <input type="text" (keyup)="callMe()" placeholder="keyup">
+    
+    <input type="text" (keydown)="callMe()" placeholder="keydown">
+    
+    <input type="text" (keypress)="callMe()" placeholder="keypress">
+    
+    <input type="text" (copy)="callMe()" placeholder="copy">
+    
+    <input type="text" (paste)="callMe()" placeholder="paste">
+    
+    <input type="text" (cut)="callMe()" placeholder="cut">
+    
+    <input type="text" (select)="callMe()" placeholder="select">
+
+    
+    <button >submit button </button>
+</form>
+</pre>
+
+

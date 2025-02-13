@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ // components, directives ,pipes
@@ -21,10 +23,12 @@ import { VarComponent } from './var/var.component';
     HomeComponent,
     IntroComponent,
     VarComponent,
+    DirectivesComponent,
   ],
   imports: [ //modules
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [], // services
   bootstrap: [AppComponent] // first component
