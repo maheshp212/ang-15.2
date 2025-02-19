@@ -1,0 +1,76 @@
+<p>forms works!</p>
+
+<!-- 
+
+field states  -- all are booleans
+    valid 
+    invalid
+    dirty - if you modify
+    pristine
+    touched -
+    untouched
+    hasError('required')
+    hasError('minlength')
+    hasError('maxlength')
+    hasError('min')
+    hasError('max')
+    hasError('pattern')
+
+form states  -- all are booleans
+    valid - true
+    invalid - false
+    dirty - if you modify
+    pristine
+    touched -
+    untouched
+    submitted
+    
+    -->
+<pre>
+    <form name="frm" #f="ngForm" (submit)="reg()">
+    
+        <input type="text" name="fname" [(ngModel)]="fname" #firstName="ngModel" placeholder="fname" required minlength="5" maxlength="10"/> {{fname}}
+        
+        <input type="email" name="email" [(ngModel)]="email" #emailId="ngModel"  placeholder="email" required/> {{email}}
+        
+        <input type="number" name="age" [(ngModel)]="age" #agenumber="ngModel" placeholder="age" min="18" max="40"/> {{age}}
+        
+        <input type="tel" name="phone" [(ngModel)]="phone" #phonenum="ngModel" placeholder="phone number" required  pattern="[789][0-9]{9}"/> {{phone}}
+        
+        <input type="date" name="today" [(ngModel)]="today" #date="ngModel" min="2024-12-25" max="2025-05-13" /> {{today}}
+    
+    </form>
+
+
+
+
+
+    field states  -- all are booleans
+    valid :: {{firstName.valid}}
+    invalid :: {{firstName.invalid}}
+    dirty :: {{firstName.dirty}}
+    pristine :: {{firstName.pristine}}
+    touched :: {{firstName.touched}}
+    untouched :: {{firstName.untouched}}
+     hasError('required') :: {{firstName.hasError('required')}}
+    hasError('minlength') :: {{firstName.hasError('minlength')}}
+    hasError('maxlength') :: {{firstName.hasError('maxlength')}}
+   
+   
+    age validations:
+    hasError('min') :: {{agenumber.hasError('min')}}
+    hasError('max') :: {{agenumber.hasError('max')}}
+
+    phone
+    hasError('required') :: {{phonenum.hasError('required')}}
+    hasError('pattern') :: {{phonenum.hasError('pattern')}}
+
+form states  -- all are booleans
+    valid :: {{f.valid}}
+    invalid  :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched  :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+</pre>
