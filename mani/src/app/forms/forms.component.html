@@ -27,18 +27,27 @@ form states  -- all are booleans
     
     -->
 <pre>
-    <form name="frm" #f="ngForm" (submit)="reg()">
+    <form name="frm" #f="ngForm" (submit)="f.valid && reg()">
     
         <input type="text" name="fname" [(ngModel)]="fname" #firstName="ngModel" placeholder="fname" required minlength="5" maxlength="10"/> {{fname}}
-        
+        <!-- <p class="error" *ngIf="firstName.invalid"> please enter a valid fname </p> -->
+        <!-- <p class="error" *ngIf="firstName.dirty && firstName.invalid"> please enter a valid fname </p> -->
+        <!-- <p class="error" *ngIf="firstName.touched && firstName.invalid"> please enter a valid fname </p> -->
+        <!-- <p class="error" *ngIf="f.submitted && firstName.invalid"> please enter a valid fname </p> -->
+
+        <p class="error" *ngIf="firstName.dirty && firstName.hasError('required')"> this is mandatory field </p>
+        <p class="error" *ngIf="firstName.dirty && firstName.hasError('minlength')"> Please enter min 5 characters </p>
+
         <input type="email" name="email" [(ngModel)]="email" #emailId="ngModel"  placeholder="email" required/> {{email}}
         
         <input type="number" name="age" [(ngModel)]="age" #agenumber="ngModel" placeholder="age" min="18" max="40"/> {{age}}
+        <p class="error" *ngIf="agenumber.dirty && agenumber.hasError('min')"> age cannot be less than 18 </p>
+        <p class="error" *ngIf="agenumber.dirty && agenumber.hasError('max')"> age cannot be more than 40 </p>
         
         <input type="tel" name="phone" [(ngModel)]="phone" #phonenum="ngModel" placeholder="phone number" required  pattern="[789][0-9]{9}"/> {{phone}}
         
         <input type="date" name="today" [(ngModel)]="today" #date="ngModel" min="2024-12-25" max="2025-05-13" /> {{today}}
-    
+        <button> Register </button>
     </form>
 
 
@@ -52,7 +61,7 @@ form states  -- all are booleans
     pristine :: {{firstName.pristine}}
     touched :: {{firstName.touched}}
     untouched :: {{firstName.untouched}}
-     hasError('required') :: {{firstName.hasError('required')}}
+    hasError('required') :: {{firstName.hasError('required')}}
     hasError('minlength') :: {{firstName.hasError('minlength')}}
     hasError('maxlength') :: {{firstName.hasError('maxlength')}}
    

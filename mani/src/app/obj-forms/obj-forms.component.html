@@ -1,1 +1,87 @@
 <p>obj-forms works!</p>
+
+
+
+<!-- 
+
+field states  -- all are booleans
+    valid 
+    invalid
+    dirty - if you modify
+    pristine
+    touched -
+    untouched
+    hasError('required')
+    hasError('minlength')
+    hasError('maxlength')
+    hasError('min')
+    hasError('max')
+    hasError('pattern')
+
+form states  -- all are booleans
+    valid - true
+    invalid - false
+    dirty - if you modify
+    pristine
+    touched -
+    untouched
+    submitted
+    
+    -->
+<pre>
+    <form name="frm" #f="ngForm" (submit)="f.valid && reg()">
+    
+        <input type="text" name="fname" [(ngModel)]="user.fname" #fname="ngModel" placeholder="fname" required minlength="5" maxlength="10"/> {{user.fname}}
+        <!-- <p class="error" *ngIf="fname.invalid"> please enter a valid fname </p> -->
+        <!-- <p class="error" *ngIf="fname.dirty && fname.invalid"> please enter a valid fname </p> -->
+        <!-- <p class="error" *ngIf="fname.touched && fname.invalid"> please enter a valid fname </p> -->
+        <!-- <p class="error" *ngIf="f.submitted && fname.invalid"> please enter a valid fname </p> -->
+
+        <p class="error" *ngIf="fname.dirty && fname.hasError('required')"> this is mandatory field </p>
+        <p class="error" *ngIf="fname.dirty && fname.hasError('minlength')"> Please enter min 5 characters </p>
+
+        <input type="email" name="email" [(ngModel)]="user.email" #email="ngModel"  placeholder="email" required/> {{user.email}}
+        
+        <input type="number" name="age" [(ngModel)]="user.age" #age="ngModel" placeholder="age" min="18" max="40"/> {{user.age}}
+        <p class="error" *ngIf="age.dirty && age.hasError('min')"> age cannot be less than 18 </p>
+        <p class="error" *ngIf="age.dirty && age.hasError('max')"> age cannot be more than 40 </p>
+        
+        <input type="tel" name="phone" [(ngModel)]="user.phone" #phone="ngModel" placeholder="phone number" required  pattern="[789][0-9]{9}"/> {{user.phone}}
+        
+        <input type="date" name="today" [(ngModel)]="user.today" #today="ngModel" min="2024-12-25" max="2025-05-13" /> {{user.today}}
+        <button> Register </button>
+    </form>
+
+
+
+
+
+    field states  -- all are booleans
+    valid :: {{fname.valid}}
+    invalid :: {{fname.invalid}}
+    dirty :: {{fname.dirty}}
+    pristine :: {{fname.pristine}}
+    touched :: {{fname.touched}}
+    untouched :: {{fname.untouched}}
+    hasError('required') :: {{fname.hasError('required')}}
+    hasError('minlength') :: {{fname.hasError('minlength')}}
+    hasError('maxlength') :: {{fname.hasError('maxlength')}}
+   
+   
+    age validations:
+    hasError('min') :: {{age.hasError('min')}}
+    hasError('max') :: {{age.hasError('max')}}
+
+    phone
+    hasError('required') :: {{phone.hasError('required')}}
+    hasError('pattern') :: {{phone.hasError('pattern')}}
+
+form states  -- all are booleans
+    valid :: {{f.valid}}
+    invalid  :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched  :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+</pre>

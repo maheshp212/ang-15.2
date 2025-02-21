@@ -15,6 +15,8 @@ export class FormsComponent {
   today:string= '';
 
   reg() {
-    alert("i got the details")
+    alert("i got the details :: " + this.fname+ " :: " + this.age);
+
+    // fetch the form values  & send it to the API or do what ever you want
   }
 }
