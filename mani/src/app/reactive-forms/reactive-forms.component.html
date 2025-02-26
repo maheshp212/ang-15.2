@@ -1,1 +1,22 @@
 <p>reactive-forms works!</p>
+
+<pre>
+    <form name="form" [formGroup] ="regFormGroup" (submit)="reg()">
+        <input type="text" name="fname" formControlName="fname" placeholder="fname" />
+
+        <p class="error" *ngIf="regFormGroup.controls['fname'].dirty && regFormGroup.controls['fname'].hasError('required')"> this is mandatory field </p>
+        <p class="error" *ngIf="regFormGroup.controls['fname'].dirty && regFormGroup.controls['fname'].hasError('minlength')"> Please enter min 5 characters </p>
+
+        dirty: {{regFormGroup.controls['fname'].dirty}}
+        required: {{regFormGroup.controls['fname'].hasError('required')}}
+        minlength : {{regFormGroup.controls['fname']?.hasError('minlength')}}
+        maxlength: {{regFormGroup.controls['fname']?.hasError('maxlength')}}
+        <input type="text" name="lname" formControlName="lname" placeholder="lname" />
+        <input type="number" name="age" formControlName="age" placeholder="age" />
+        min: {{regFormGroup.controls['age']?.hasError('min')}}
+        max: {{regFormGroup.controls['age']?.hasError('max')}}
+        <input type="tel" name="phone" formControlName="phone" placeholder="phone" />
+        pattern : {{regFormGroup.controls['phone']?.hasError('pattern')}}
+
+    </form>
+</pre>
