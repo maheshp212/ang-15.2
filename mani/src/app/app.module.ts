@@ -18,6 +18,10 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
+import { ApisComponent } from './apis/apis.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { AuthInterceptor } from './http';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [ // components, directives ,pipes
@@ -36,14 +40,17 @@ import { ParamsPipe } from './params.pipe';
     PipesComponent,
     HexaPipe,
     ParamsPipe,
+    ApisComponent,
+    LifeCycleComponent,
   ],
   imports: [ //modules
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [], // services
+  providers: [ {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }], // services
   bootstrap: [AppComponent] // first component
 })
 export class AppModule { }
