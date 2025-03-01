@@ -1,0 +1,28 @@
+<p>custom works!</p>
+
+
+<div class="header">
+  <div class="heading"><h1>{{data.headging}}</h1></div>
+  <div class="view-all"><a href="#">View All</a></div>
+</div>
+<div class="cards-list">
+  <div *ngFor="let card of data.cards" class="card">
+    <div class="card-heading" [ngStyle]="{ 'background-color': card.bgColor }">
+      <div class="card-title">{{ card.title }}</div>
+      <div class="card-subtitle">{{ card.subTitle }}</div>
+    </div>
+    <div class="card-body">
+      <div class="card-metrics">
+        <div class="card-intrested">{{ card.intrested }} intrested Geeks</div>
+        <div class="card-rating"><span style="font-size:30px;color:yellow;">★</span>
+            {{ card.rating }}</div>
+      </div>
+      <div class="card-fullname">{{ card.fullName }}</div>
+      <div class="card-type">{{ card.type }}</div>
+      <div class="card-left" *ngIf="card.seatsLeft > 0">{{ card.seatsLeft }} seats left</div>
+    </div>
+    <div class="card-footer">
+      <button class="card-explore" (click)="expore(card.id)">Explore</button>
+    </div>
+  </div>
+</div>

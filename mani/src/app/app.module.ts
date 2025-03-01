@@ -22,6 +22,7 @@ import { ApisComponent } from './apis/apis.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AuthInterceptor } from './http';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [ // components, directives ,pipes
@@ -42,6 +43,7 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     ParamsPipe,
     ApisComponent,
     LifeCycleComponent,
+    CustomComponent,
   ],
   imports: [ //modules
     BrowserModule,
