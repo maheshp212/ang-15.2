@@ -65,4 +65,16 @@ export class IntroComponent {
         console.log(' im id from intro component' + id);
     } 
 
+
+    login(){
+      console.log('you can write your custom logics here')
+    }
+    fetchFname(name:any){
+      console.log('####################')
+      console.log(name)
+    }
+    fetchUser(user:any){
+      console.log('*******************')
+      console.log(user)
+    }
 }

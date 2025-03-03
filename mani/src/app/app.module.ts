@@ -23,6 +23,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { AuthInterceptor } from './http';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { CustomComponent } from './custom/custom.component';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 @NgModule({
   declarations: [ // components, directives ,pipes
@@ -44,6 +46,8 @@ import { CustomComponent } from './custom/custom.component';
     ApisComponent,
     LifeCycleComponent,
     CustomComponent,
+    AttrDirective,
+    ClassDirective,
   ],
   imports: [ //modules
     BrowserModule,

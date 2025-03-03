@@ -1,4 +1,17 @@
 <p>intro works!</p>
+
+<p [appAttr]="login"
+[msg] ="'hello'"
+[fname] = "'mani'"
+[user] = "{tech:'anuglar', exp: 5}"
+
+(sendFname) = "fetchFname($event)"
+(sendUser) = "fetchUser($event)"
+> this is a custom attr directive</p>
+
+
+<div class="appClass">this is class dirctive  </div>
+
 <app-custom [data]="cardsData" (courseSelected)="selectedCouse($event)"></app-custom>
 
 
