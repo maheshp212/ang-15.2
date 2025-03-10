@@ -25,6 +25,11 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { CustomComponent } from './custom/custom.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [ // components, directives ,pipes
@@ -54,7 +59,12 @@ import { ClassDirective } from './class.directive';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [ {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }], // services
   bootstrap: [AppComponent] // first component

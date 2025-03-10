@@ -1,1 +1,174 @@
 <p>home works!</p>
+
+
+<p>You can easily control dropdowns programmatically using the exported dropdown instance.</p>
+
+<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+	<button
+		type="button"
+		class="btn btn-outline-primary me-2"
+		id="dropdownManual"
+		ngbDropdownAnchor
+		(focus)="myDrop.open()"
+	>
+		Toggle dropdown
+	</button>
+	<div ngbDropdownMenu aria-labelledby="dropdownManual">
+		<button ngbDropdownItem>Action - 1</button>
+		<button ngbDropdownItem>Another Action</button>
+		<button ngbDropdownItem>Something else is here</button>
+	</div>
+</div>
+
+<button type="button" class="btn btn-outline-success me-2" (click)="$event.stopPropagation(); myDrop.open()">
+	Open from outside
+</button>
+<button type="button" class="btn btn-outline-danger me-2" (click)="$event.stopPropagation(); myDrop.close()">
+	Close from outside
+</button>
+
+
+
+<ngb-carousel *ngIf="images">
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[0]" alt="Random first slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>First slide label</h3>
+			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[1]" alt="Random second slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>Second slide label</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+	</ng-template>
+	<ng-template ngbSlide>
+		<div class="picsum-img-wrapper">
+			<img [src]="images[2]" alt="Random third slide" />
+		</div>
+		<div class="carousel-caption">
+			<h3>Third slide label</h3>
+			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+		</div>
+	</ng-template>
+</ngb-carousel>
+
+
+
+<section>
+    <div class="example-label">Basic</div>
+    <div class="example-button-row">
+      <button mat-button>Basic</button>
+      <button mat-button disabled>Disabled</button>
+      <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button disabled>Disabled</button>
+      <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Stroked</div>
+    <div class="example-button-row">
+      <button mat-stroked-button>Basic</button>
+      <button mat-stroked-button disabled>Disabled</button>
+      <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Flat</div>
+    <div class="example-button-row">
+      <button mat-flat-button>Basic</button>
+      <button mat-flat-button disabled>Disabled</button>
+      <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Icon</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">FAB</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-fab aria-label="Example icon button with a delete icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-fab disabled aria-label="Example icon button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div class="example-label">Mini FAB</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-mini-fab aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="example-label">Extended Fab</div>
+    <div class="example-button-row">
+      <div class="example-flex-container">
+        <div class="example-button-container">
+          <button mat-fab extended>
+            <mat-icon>favorite</mat-icon>
+            Basic
+          </button>
+        </div>
+        <div class="example-button-container">
+          <button mat-fab extended disabled>
+            <mat-icon>favorite</mat-icon>
+            Disabled
+          </button>
+        </div>
+        <div class="example-button-container">
+          <a mat-fab extended routerLink=".">
+            <mat-icon>favorite</mat-icon>
+            Link
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
