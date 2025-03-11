@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { ObsComponent } from './obs/obs.component';
 
 @NgModule({
   declarations: [ // components, directives ,pipes
@@ -53,6 +54,7 @@ import {MatButtonModule} from '@angular/material/button';
     CustomComponent,
     AttrDirective,
     ClassDirective,
+    ObsComponent,
   ],
   imports: [ //modules
     BrowserModule,

@@ -10,6 +10,7 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { PipesComponent } from './pipes/pipes.component';
 import { ApisComponent } from './apis/apis.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ObsComponent } from './obs/obs.component';
 
 const routes: Routes = [
   {path:"home", component:HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:"pipes", component:PipesComponent},
   {path:"apis", component:ApisComponent},
   {path:"life-cycle", component:LifeCycleComponent},
+  {path:"obs", component:ObsComponent},
 ];
 
 @NgModule({
